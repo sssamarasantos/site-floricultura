@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+
+body {
+  background-image: url(assets/images/fundo.jpg);
+  -webkit-font-smoothing: antialiased;
+  /* background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: auto; */
+}
