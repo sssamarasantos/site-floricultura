@@ -1,3 +1,8 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
 .container-fluid {
   justify-content: center;
 }
@@ -22,6 +27,31 @@
   margin-bottom: 0;
   font-family: Tekton Pro;
   font-size: 80px;
+}
+
+.header-account {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header-account li+li {
+  margin-top: 25px;
+}
+
+.button-account {
+  color: black;
+  background-color: #ff66b3;
+  border: solid black 1px;
+  font-family: Tekton Pro;
+  font-size: 17px;
+}
+
+.button-account:hover {
+  color: white;
+  background-color: black;
+  border: solid whitesmoke 1px;
+  font-family: Tekton Pro;
 }
 
 .container {
@@ -86,7 +116,6 @@
 }
 
 .footer-list {
-  list-style-type: none;
   padding: 0;
   margin: 5px 0;
   width: 250px;
@@ -116,5 +145,20 @@ h5 {
     margin-left: 0 !important;
     padding-right: var(--bs-gutter-x, 1.75rem);
     padding-left: var(--bs-gutter-x, 1.75rem);
+  }
+
+  .header-account {
+    flex-direction: row !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-account {
+    flex-direction: row !important;
+    margin-bottom: 5px;
+  }
+
+  .header-account li+li {
+    margin-left: 15px;
   }
 }
