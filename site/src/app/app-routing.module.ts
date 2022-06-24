@@ -9,7 +9,7 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       {
-        path: 'caminho', component: WebsiteBodyComponent
+        path: '', component: HomeComponent
       }
     ]
   }
