@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './shared/material/material.module';
 import { WebsiteBodyComponent } from './shared/components/website-body/website-body.component';
 import { HomeComponent } from './views/home/home.component';
+import { SobreNosComponent } from './views/sobre-nos/sobre-nos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WebsiteBodyComponent,
-    HomeComponent
+    HomeComponent,
+    SobreNosComponent
   ],
   imports: [
     BrowserModule,
