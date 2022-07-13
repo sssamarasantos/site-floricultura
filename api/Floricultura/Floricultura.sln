@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Floricultura", "Floricultura\Floricultura.csproj", "{8E82CA07-356D-4075-A3C9-F24F904CF435}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Floricultura.API", "Floricultura\Floricultura.API.csproj", "{8E82CA07-356D-4075-A3C9-F24F904CF435}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Floricultura.Data", "Floricultura.Data\Floricultura.Data.csproj", "{7E699021-014C-4A29-9B43-6EAD638ADABA}"
 EndProject

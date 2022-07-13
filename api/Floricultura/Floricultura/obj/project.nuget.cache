@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AqgCDrCL9ar3wUlN7hFuBYXXsNSBoInjpCkdIEn6hjM2o1MeohkbwZN3syTIp0L6pP29LH1O3vtrKY0GjKjrmA==",
+  "dgSpecHash": "jE9oRy4ZWobREwb5gz5L/Vb5FZlqAq3zMkDxSuROVji2iUz94/kHTtSrnvGc5uo/MqCrBpfx/1jrhoniMs0c1w==",
   "success": true,
-  "projectFilePath": "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura\\Floricultura.csproj",
+  "projectFilePath": "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura\\Floricultura.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samar\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\samar\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

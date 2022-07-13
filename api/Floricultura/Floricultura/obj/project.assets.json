@@ -213,9 +213,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura\\Floricultura.csproj",
-      "projectName": "Floricultura",
-      "projectPath": "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura\\Floricultura.csproj",
+      "projectUniqueName": "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura\\Floricultura.API.csproj",
+      "projectName": "Floricultura.API",
+      "projectPath": "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura\\Floricultura.API.csproj",
       "packagesPath": "C:\\Users\\samar\\.nuget\\packages\\",
       "outputPath": "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura\\obj\\",
       "projectStyle": "PackageReference",
