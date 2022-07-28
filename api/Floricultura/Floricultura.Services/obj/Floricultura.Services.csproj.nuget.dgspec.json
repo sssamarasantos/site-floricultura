@@ -4,6 +4,60 @@
     "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura.Services\\Floricultura.Services.csproj": {}
   },
   "projects": {
+    "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura.Domain\\Floricultura.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura.Domain\\Floricultura.Domain.csproj",
+        "projectName": "Floricultura.Domain",
+        "projectPath": "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura.Domain\\Floricultura.Domain.csproj",
+        "packagesPath": "C:\\Users\\samar\\.nuget\\packages\\",
+        "outputPath": "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\samar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura.Services\\Floricultura.Services.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +81,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura.Domain\\Floricultura.Domain.csproj": {
+                "projectPath": "D:\\Estudos\\Angular\\site-floricultura\\api\\Floricultura\\Floricultura.Domain\\Floricultura.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

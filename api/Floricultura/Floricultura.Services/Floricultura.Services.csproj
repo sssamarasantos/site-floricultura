@@ -10,4 +10,8 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Floricultura.Domain\Floricultura.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

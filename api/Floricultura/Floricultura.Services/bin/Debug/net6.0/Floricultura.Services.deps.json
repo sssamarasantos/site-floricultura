@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Floricultura.Services/1.0.0": {
+        "dependencies": {
+          "Floricultura.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Floricultura.Services.dll": {}
+        }
+      },
+      "Floricultura.Domain/1.0.0": {
+        "runtime": {
+          "Floricultura.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Floricultura.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Floricultura.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
