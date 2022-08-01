@@ -28,35 +28,17 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarToggle">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="home">Home</a>
+        <ul class="navbar-nav" *ngFor="let menu of menus">
+          <li class="nav-item" *ngIf="menu.subMenus.length === 0">
+            <a class="nav-link" routerLink="{{menu.route}}">{{menu.item}}</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="#">Tipo de flores</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="#">Buquês</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="#">Cestas</a>
-          </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" *ngIf="menu.subMenus.length > 0">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Monte seu presente</a>
+              aria-expanded="false">{{menu.item}}</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" routerLink="#">Buquês</a></li>
-              <li><a class="dropdown-item" routerLink="#">Cestas</a></li>
+              <li *ngFor="let subMenu of menu.subMenus"><a class="dropdown-item"
+                  routerLink="{{subMenu.route}}">{{subMenu.item}}</a></li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="#">Eventos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="#">Orçamento</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="sobre-nos">Sobre nós</a>
           </li>
         </ul>
       </div>
