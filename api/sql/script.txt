@@ -1,0 +1,34 @@
+CREATE DATABASE FLORICULTURA
+USE FLORICULTURA
+GO
+
+CREATE TABLE Menu(
+   ID INT NOT NULL IDENTITY,
+   ITEM VARCHAR(100) NOT NULL,
+   ROTA VARCHAR(100) NOT NULL,
+   ORDEM INT NOT NULL,
+   PRIMARY KEY (ID)
+);
+GO
+CREATE TABLE SubMenu(
+   ID INT NOT NULL IDENTITY,
+   ITEM VARCHAR(100) NOT NULL,
+   ROTA VARCHAR(100) NOT NULL,
+   ORDEM INT NOT NULL,
+   IDMENU INT,
+   PRIMARY KEY (ID),
+   FOREIGN KEY (IDMENU) REFERENCES Menu(ID)
+);
+GO
+INSERT INTO Menu VALUES
+('HOME', '/home', 1),
+('TIPOS DE FLORES', '/tipos-de-flores', 2),
+('CESTAS', '/cestas', 3),
+('BUQUÊS', '/buques', 4),
+('MONTE SEU PRESENTE', '/monte-seu-presente', 5),
+('EVENTOS', '/eventos', 6),
+('ORÇAMENTO', '/orcamento', 7);
+GO
+INSERT INTO SubMenu VALUES
+('BUQUÊS', '/buques', 1, 5),
+('CESTAS', '/cestas', 2, 5);
