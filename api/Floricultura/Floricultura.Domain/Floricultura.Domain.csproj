@@ -10,4 +10,8 @@
     <Folder Include="DTOs\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.SecretsManager" Version="3.7.2.108" />
+  </ItemGroup>
+
 </Project>

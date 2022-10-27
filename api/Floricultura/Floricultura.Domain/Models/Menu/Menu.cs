@@ -4,7 +4,8 @@
     {
         public int Id { get; set; }
         public string? Item { get; set; }
-        public string? Route { get; set; }
+        public string? Rota { get; set; }
+        public int Ordem { get; set; }
         public IEnumerable<SubMenu>? SubMenus { get; set; }
     }
 }

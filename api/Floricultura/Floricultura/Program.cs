@@ -1,5 +1,6 @@
 using Floricultura.Data;
 using Floricultura.Data.Repository;
+using Floricultura.Domain.Aws;
 using Floricultura.Domain.Interfaces.Repositories;
 using Floricultura.Domain.Interfaces.Services;
 using Floricultura.Services.Services;
@@ -16,7 +17,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<Context>(options =>
 options.UseSqlServer(
-    builder.Configuration.GetConnectionString("DefaultConnection")
+    GlobalSecrets.Configuracoes.ConnectionString
     ));
 
 builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));

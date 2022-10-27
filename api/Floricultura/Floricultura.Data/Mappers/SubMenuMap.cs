@@ -10,7 +10,8 @@ namespace Floricultura.Data.Mappings
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Item).IsRequired().HasMaxLength(100);
-            builder.Property(x => x.Route).IsRequired().HasMaxLength(100);
+            builder.Property(x => x.Rota).IsRequired().HasMaxLength(100);
+            builder.Property(x => x.Ordem).IsRequired();
             builder.Property(x => x.IdMenu).IsRequired();
         }
     }

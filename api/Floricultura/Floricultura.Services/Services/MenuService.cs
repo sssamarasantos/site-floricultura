@@ -16,7 +16,6 @@ namespace Floricultura.Services.Services
         public async Task<IEnumerable<Menu>> BuscarMenuAsync()
         {
             var teste = await _context.Menu.Include(x => x.SubMenus).ToListAsync();
-
             return teste;
         }
     }
