@@ -20,6 +20,7 @@ export class WebsiteBodyComponent implements OnInit {
 
   private listar() {
     this.menuService.listar().subscribe((response: Menu[]) => {
+      console.log(response)
       this.menus = response;
       console.log(this.menus);
     });

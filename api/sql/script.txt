@@ -27,7 +27,8 @@ INSERT INTO Menu VALUES
 ('BUQUÊS', '/buques', 4),
 ('MONTE SEU PRESENTE', '/monte-seu-presente', 5),
 ('EVENTOS', '/eventos', 6),
-('ORÇAMENTO', '/orcamento', 7);
+('ORÇAMENTO', '/orcamento', 7),
+('SOBRE NÓS', '/sobre-nos', 8);
 GO
 INSERT INTO SubMenu VALUES
 ('BUQUÊS', '/buques', 1, 5),
