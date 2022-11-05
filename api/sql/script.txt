@@ -33,3 +33,64 @@ GO
 INSERT INTO SubMenu VALUES
 ('BUQUÊS', '/buques', 1, 5),
 ('CESTAS', '/cestas', 2, 5);
+
+CREATE TABLE Categoria (
+	ID INT NOT NULL IDENTITY,
+	NOME VARCHAR(100) NOT NULL,
+	PRIMARY KEY(ID)
+);
+GO
+
+CREATE TABLE SubCategoria (
+	ID INT NOT NULL IDENTITY,
+	NOME VARCHAR(100) NOT NULL,
+	IDCATEGORIA INT,
+	PRIMARY KEY(ID),
+	FOREIGN KEY (IDCATEGORIA) REFERENCES Categoria(ID)
+);
+GO
+
+CREATE TABLE ProdutoFoto (
+	ID INT NOT NULL IDENTITY,
+	FOTO VARCHAR(200) NOT NULL,
+	PRIMARY KEY(ID)
+);
+GO
+
+CREATE TABLE Produto (
+	ID INT NOT NULL IDENTITY,
+	NOME VARCHAR(100) NOT NULL,
+	DESCRICAO VARCHAR(500),
+	VALOR DECIMAL(7,2) NOT NULL,
+	QUANTIDADE INT NOT NULL,
+	IDCATEGORIA INT,
+	IDFOTO INT NOT NULL,
+	PRIMARY KEY(ID),
+	FOREIGN KEY (IDCATEGORIA) REFERENCES Categoria(ID),
+	FOREIGN KEY (IDFOTO) REFERENCES ProdutoFoto(ID)
+);
+
+INSERT INTO Categoria VALUES
+('Buquês'),
+('Cestas')
+('Cestas Montar'),
+('Flores'),
+('Flores Montar');
+
+INSERT INTO SubCategoria VALUES
+('Buquê de Flores', 1),
+('Buquê de Rosas', 1),
+('Mega Buquês', 1),
+('Cestas', 3),
+('Chocolates', 3),
+('Pelúcias', 3),
+('Canecas', 3),
+('Girassóis', 4),
+('Lírios', 4),
+('Orquídeas', 4),
+('Rosas Amarelas', 4),
+('Rosas Brancas', 4),
+('Rosas Cor de Rosa', 4),
+('Rosas Vermelhas', 4),
+('Tulipas', 4),
+('Flores', 5);

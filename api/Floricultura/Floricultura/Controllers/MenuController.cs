@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Floricultura.API.Controllers
 {
     [ApiController]
-    [Route("v1/[controller]")]
+    [Route("api/[controller]")]
     public class MenuController : Controller
     {
         private readonly IMenuService _menuService;

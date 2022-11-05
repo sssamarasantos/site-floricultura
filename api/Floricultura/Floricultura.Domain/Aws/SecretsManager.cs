@@ -30,7 +30,7 @@ namespace Floricultura.Domain.Aws
                     return Encoding.UTF8.GetString(Convert.FromBase64String(reader.ReadToEnd()));
                 }
             }
-            catch (ResourceNotFoundException )
+            catch (ResourceNotFoundException)
             {
                 throw new ResourceNotFoundException("Secret" + secretName + "não encontrado!");
             }

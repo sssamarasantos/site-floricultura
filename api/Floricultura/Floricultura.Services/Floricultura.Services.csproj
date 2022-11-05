@@ -11,6 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.101.8" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Floricultura.Data\Floricultura.Data.csproj" />
     <ProjectReference Include="..\Floricultura.Domain\Floricultura.Domain.csproj" />
   </ItemGroup>
