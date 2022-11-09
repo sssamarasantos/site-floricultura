@@ -8,9 +8,8 @@
         public decimal Valor { get; set; }
         public int Quantidade { get; set; }
         public int? IdCategoria { get; set; }
-        public int IdFoto { get; set; }
 
-        public virtual Categoria? Categoria { get; set; }
-        public virtual ProdutoFoto? ProdutoFoto { get; set; }
+        public Categoria? Categoria { get; set; }
+        public IEnumerable<ProdutoFoto>? Fotos { get; set; }
     }
 }

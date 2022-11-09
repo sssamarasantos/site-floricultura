@@ -4,6 +4,6 @@ namespace Floricultura.Domain.Interfaces.Services
 {
     public interface IProdutoService
     {
-        Task IncluirAsync(ProdutoRequest request, CancellationToken cancellationToken);
+        Task IncluirAsync(ProdutoRequest request);
     }
 }

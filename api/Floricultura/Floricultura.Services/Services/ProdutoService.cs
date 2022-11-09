@@ -5,6 +5,7 @@ using Floricultura.Domain.Interfaces.Clients;
 using Floricultura.Domain.Interfaces.Services;
 using Floricultura.Domain.Models.Produto;
 using Microsoft.AspNetCore.Http;
+using System.Threading;
 
 namespace Floricultura.Services.Services
 {
@@ -20,22 +21,36 @@ namespace Floricultura.Services.Services
             _context = context;
         }
 
-        public async Task IncluirAsync(ProdutoRequest request, CancellationToken cancellationToken)
+        public async Task IncluirAsync(ProdutoRequest request)
         {
             _ = request ?? throw new ArgumentNullException(nameof(request));
 
-            var nomeImagem = await IncluirFotoAsync(request.Foto);
+            var nomeFoto = await IncluirFotoBucketAsync(request.Foto);
+
             var produto = _mapper.Map<Produto>(request);
-            produto.ProdutoFoto = new ProdutoFoto { Foto = nomeImagem };
-            await _context.Produto.AddAsync(produto, cancellationToken);
-            _context.SaveChanges();
+            await _context.Produto.AddAsync(produto);
+            var idProduto = _context.SaveChanges();
+
+            await IncluirProdutoFotoAsync(idProduto, nomeFoto);
         }
 
-        private async Task<string> IncluirFotoAsync(IFormFile foto)
+        private async Task<string> IncluirFotoBucketAsync(IFormFile foto)
         {
             var nomeImagem = "cestas/" + foto.FileName;
             await _s3Client.UploadFileAsync(nomeImagem, foto);
             return nomeImagem;
+        }
+
+        private async Task IncluirProdutoFotoAsync(int idProduto, string nomeFoto)
+        {
+            var produtoFoto = new ProdutoFoto
+            {
+                Foto = nomeFoto,
+                IdProduto = idProduto
+            };
+
+            await _context.ProdutoFoto.AddAsync(produtoFoto);
+            _context.SaveChanges();
         }
     }
 }

@@ -10,6 +10,7 @@ namespace Floricultura.Data.Mappers
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Foto).IsRequired().HasMaxLength(1000);
+            builder.HasOne(x => x.Produto).WithMany(x => x.Fotos).HasForeignKey(x => x.IdProduto);
         }
     }
 }
