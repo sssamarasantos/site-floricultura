@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { Menu } from '../models/Menu';
 
-const url = 'https://localhost:7058/v1/Menu';
+const url = 'https://localhost:7058/api/Menu';
 
 @Injectable({
   providedIn: 'root'

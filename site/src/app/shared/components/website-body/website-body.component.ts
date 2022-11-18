@@ -19,11 +19,15 @@ export class WebsiteBodyComponent implements OnInit {
   }
 
   private listar() {
-    this.menuService.listar().subscribe((response: Menu[]) => {
-      console.log(response)
-      this.menus = response;
-      console.log(this.menus);
-    });
+    let listaMenus = sessionStorage.getItem('menus');
+    if (listaMenus != null || listaMenus != undefined) {
+      this.menus = JSON.parse(listaMenus);
+    }
+    else {
+      this.menuService.listar().subscribe((response: Menu[]) => {
+        sessionStorage.setItem('menus', JSON.stringify(response));
+        this.menus = response;
+      });
+    }
   }
-
 }
